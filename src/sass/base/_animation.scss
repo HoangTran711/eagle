@@ -1,0 +1,107 @@
+@keyframes imageMove {
+    from{
+        transform:scale(0);
+    }
+    to {
+        transform:scale(1);
+    }
+}
+@keyframes boxMove {
+    0% {
+        transform:rotate(30deg)  translate(-50%,-50%);
+        opacity:0;
+    }
+    30% {
+        opacity: 0.1;
+        
+    }
+    100% {
+        opacity: 1;
+        transform:rotate(0deg) translate(-50%,-50%);
+    }
+}
+@keyframes captionTextMove {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes captionMove {
+    from {
+        transform:translateY(7rem);
+        opacity:0;
+    }
+    to {
+        transform:translateY(0rem);
+        opacity:1
+    }
+}
+@keyframes socialMove {
+    from {
+        transform:translateY(0rem)
+    }
+    to {
+        transform:translateY(-4rem);
+    }
+}
+@keyframes moveInLeft {
+    0% {
+        transform:translateX(-5rem);
+        opacity: 0;
+    }
+    60% {
+        opacity: 0.2;
+    }
+    100% {
+        transform:translateX(0rem);
+        opacity: 1;
+    }
+}
+@keyframes moveInRight {
+    0% {
+        transform:translateX(5rem);
+        opacity: 0;
+    }
+    60% {
+        opacity: 0.2;
+    }
+    100% {
+        transform:translateX(0rem);
+        opacity: 1;
+    }
+}
+@keyframes moveInLeftAdd {
+    0% {
+        transform:translateX(-9.6rem);
+        opacity: 0;
+        z-index:1;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    100% {
+        transform:translateX(0rem);
+        opacity: 1;
+        z-index:-1;
+    }
+}
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-80px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes moveInBottom {
+    from {
+        opacity: 0;
+        transform:translateY(3rem);
+    }
+    to {
+        opacity: 1;
+        transform:translateY(0);
+    }
+}

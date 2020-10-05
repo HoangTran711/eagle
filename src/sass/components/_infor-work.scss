@@ -1,0 +1,280 @@
+.infor-work{
+    
+    .container-information {
+        
+        display: flex;
+        flex-direction: row;
+        padding:0 3.2rem;
+        @include respond(tab-land) {
+            flex-direction: column;
+        }
+        .img-frame {
+            height:76rem;
+            
+            width:67%;
+            display:grid;
+            grid-template-columns: 32rem 32rem 32rem 32rem;
+            grid-template-rows: 25.35rem 25.35rem 25.35rem;
+            animation:moveInBottom 1s;
+            @include respond(tab-land) {
+                width:100%;
+                grid-template-columns: 47rem 47rem 47rem 47rem;
+            }
+            // &__item1 {
+            //     grid-column: 1 / span 2;
+            //     grid-row: 1;
+            // }
+            .txt-frame {
+                position: absolute;
+                width:80%;
+                height:80%;
+                top:50%;
+                left:50%;
+                background-color: rgba(white,.85);
+                opacity: 0;
+                transform:translate(-50%,0%);
+                z-index: 100;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                transition: transform .6s,opacity .5s;
+                .title {
+                    font-size:1.9rem;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+                .content {
+                    color:#b7b7b7;
+                    font-style:italic;
+                    font-size:1.4rem;
+                }
+                .container-icon {
+                    display:flex;
+                    flex-direction: row;
+                    font-size:2rem;
+                    margin-top:1.5rem;
+                    
+                    
+                    .full-screen {
+                        &:hover {
+                            color:$color-primary;
+                        }
+                        transition:all .3s;
+                        cursor: pointer;
+                        padding:1rem 1.2rem;
+                        margin-right:1rem;
+                        border:.5px solid #D8D8D8;
+                        border-radius: 50%;
+                    }
+                    .attach {
+                        &:hover {
+                            color:$color-primary;
+                        }
+                        cursor: pointer;
+                        transition:all .3s;
+                        padding:1rem 1.2rem;
+                        border:.5px solid #D8D8D8;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            &__item1 {
+                transition:all .5s;
+                position: relative;
+                &:hover {
+                    .txt-frame {
+                        opacity:1;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+                .img1{
+                    width: 100%;
+                    height:100%;
+                }
+            }
+            &__item2 {
+                transition:all .5s;
+                position: relative;
+                &:hover {
+                    .txt-frame {
+                        opacity:1;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+                .img2{
+                    width: 100%;
+                    height:100%;
+                }
+            }
+            &__item3 {
+                transition:all .5s;
+                position: relative;
+                grid-column: 3;
+                grid-row: 1 / span 2;
+                &:hover {
+                    .txt-frame {
+                        opacity:1;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+                .img3{
+                    width: 100%;
+                    height:100%;
+                }
+            }
+            
+            &__item4 {
+                .img4{
+                    width: 100%;
+                    height:100%;
+                }
+                transition:all .5s;
+                position: relative;
+                grid-column: 1 / span 2;
+                grid-row: 2;
+                &:hover {
+                    .txt-frame {
+                        opacity:1;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+            }
+            
+            &__item5 {
+                .img5{
+                    width: 100%;
+                    height:100%;
+                }
+                &:hover {
+                    .txt-frame {
+                        opacity:1;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+                transition:all .5s;
+                position: relative;
+                //grid-column: 1 / span 3;
+                grid-row: 3;
+            }
+            &__item6 {
+                .img6{
+                    width: 100%;
+                    height:100%;
+                }
+                &:hover {
+                    .txt-frame {
+                        opacity:1;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+                transition:all .5s;
+                position: relative;
+                grid-column: 2 / span 2;
+                grid-row:3;
+            }
+        }
+    }
+    .information__left {
+        position: relative;
+        width: 33%;
+        @include respond(tab-land) {
+            width:100%;
+        }
+        &-text {
+            width:100%;
+            .tild {
+                margin-top: 8rem;
+                @include respond(tab-land) {
+                    margin-top:0;
+                    width:100%;
+                }
+                
+            }
+        }
+        &-text {
+            .box {
+                &-inner {
+                    &__name {
+                        color:#fff;
+                        margin-left:4rem;
+                        margin-top:50rem;
+                        font-size:17px;
+                        font-weight:500;
+                        text-transform: uppercase;
+                        font-style: italic;
+                        position: relative;
+                        transition:color .2s;
+                        @include respond(tab-land) {
+                            display:none;
+                        }
+                        
+                        &:hover {
+                            color:$color-primary;
+                            &::before {
+                                transform: skewX(-60deg);
+                                border-top:1px solid $color-primary;
+                                border-bottom: 1px solid $color-primary;
+                            }
+                        }
+                        &::before {
+                            content:"";
+                            padding:15px 36px;
+                            border-top:1px solid white;
+                            border-bottom: 1px solid white;
+                            position: absolute;
+                            left:0;
+                            transform: skewX(60deg);
+                            transition:transform .5s, color .5s;
+                            @include respond(tab-land) {
+                                top: 0;
+                            }
+                            @include respond(tab-port){
+                                top: 4px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .list {
+            display:flex;
+            flex-direction: column;
+            color:white;
+            position: absolute;
+            top:6rem;
+            right:6rem;
+            font-size: 2rem;
+            line-height: 75px;
+            list-style: none;
+            @include respond(tab-land) {
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width:100%;
+                top:50%;
+                right:50%;
+                transform:translateX(50%)
+            }
+            .active {
+                color:$color-primary;
+            }
+            &__item {
+                color:inherit;
+                cursor: pointer;
+                text-decoration: none;
+                transition:color .3s;
+                @include respond(tab-land) {
+                    font-weight: 500;
+                    margin-left:3rem;
+                }
+                &:hover {
+                    color:$color-primary;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+.footer {
+    padding:0 3.2rem;
+    
+    .container-footer {
+        background-color:#252525;
+        padding:7rem 4rem 4rem 4rem;
+        color:#707070;
+        .f1 {
+            .holder {
+                .logo-footer {
+                    a {
+                        text-decoration: none;
+                    }
+                    span {
+                        color:$color-primary;
+                        font-size:4rem;
+                        
+                    }
+                    .logo {
+                        .img {
+                            width:22rem;
+                        }
+                    }
+                }
+                .footer-txt {
+                    width:100%;
+                    display:flex;
+                    flex-direction: row;
+                    .text {
+                        margin: 2rem 0;
+                        font-size:1.5rem;
+                        font-weight: 500;
+                        letter-spacing: .5px;
+                    }
+                    .contact {
+                        display: flex;
+                        flex-direction: column;
+                        padding:3rem 0;
+                        margin: 3rem 0;
+                        border-top: 1px solid #707070;
+                        line-height: 3rem;
+                        .txt {
+                            
+                            font-size:1.4rem;
+                        }
+                            
+                        .stt {
+                            margin-right:2rem;
+                            color:$color-primary;
+                        }
+                    }
+                    .testimonials {
+                        margin-left:4rem;
+                        font-size: 1.4rem;
+                        list-style: none;
+                        li {
+                            color:$color-primary;
+                            &:not(:first-child) {
+                                margin-top:2.5rem;
+                            }
+                            .icon {
+
+                            }
+                            .name {
+                                font-weight: 500;
+                            }
+                            p {
+                                
+                                line-height: 25px;
+                                font-weight: 500;
+                                color:#707070;
+                            }
+                        }
+                    }
+                    .sending-emails {
+                        width:80%;
+                        background-color: white;
+                        padding:6rem;
+                        .header {
+                            font-size:3rem;
+                            font-weight:500;
+                        }
+                        .form {
+                            display:flex;
+                            flex-direction: column;
+                            margin-top:2rem;
+                            input {
+                                font-size:1.5rem;
+                                border:none;
+                                border-bottom:1px solid #E6E6E6;
+                                outline: none;
+                                padding-bottom:1rem;
+                                margin:2rem 0;
+                                font-weight: 500;
+                            }
+                            .btn {
+                                width:50%;
+                                padding:1rem 2rem;
+                                border:1px solid black;
+                                transition:all .3s;
+                                &:hover {
+                                    color:$color-primary;
+                                    border:1px solid $color-primary;
+                                }
+                                .link { 
+                                    color:inherit;
+                                    text-decoration: none;
+                                    text-transform: uppercase;
+                                    font-size:1.4rem;
+                                    letter-spacing: 2px;
+                                    font-weight: 600;
+                                }
+                                margin-top:2rem;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

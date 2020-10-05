@@ -1,0 +1,19 @@
+.slick-track {
+    height:68.459rem;
+    overflow:hidden;
+}
+#slick-slide-1 {
+    transition-delay: opacity .2s;
+}
+#slick-slide-2{
+    opacity: 0;
+    display:none;
+    visibility: hidden;
+    transition-delay: opacity ease-out .3s;
+}
+#slick-slide-3{
+    opacity: 0;
+    display:none;
+    visibility: hidden;
+    transition-delay: opacity .2s;
+}

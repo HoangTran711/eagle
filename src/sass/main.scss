@@ -1,0 +1,30 @@
+//import abstract
+@import "./abstract/mixin";
+@import "./abstract/variable";
+
+//import base
+@import "./base/base";
+
+//import components
+@import "./components/search";
+@import "./components/slickslide";
+@import "./components/slick-dots";
+@import "./components/slide-bar";
+@import "./components/slick-track";
+@import "./base/animation";
+@import "./components/information";
+@import "./components/infor-team";
+@import "./components/infor-work";
+@import "./components/infor-services";
+@import "./components/infor-testimonials";
+@import "./components/infor-blogs";
+@import "./components/infor-price";
+@import "./components/client-area";
+@import "./components/footer";
+@import "./components/scroll";
+
+
+
+// import pages
+@import "./pages/home";
+

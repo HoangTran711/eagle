@@ -1,0 +1,99 @@
+.slick-slide {
+    display:flex;
+    flex-direction:column;
+    height:68.459rem;
+    font-size:4rem;
+    padding:0 2rem;
+    overflow: hidden;
+    transition: opacity 1s, visibility .5s;
+    &__container {
+        
+        display:flex;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        position: relative;
+    }
+    &__caption {
+        text-transform: uppercase;
+        line-height:9rem;
+        padding:0 4rem;
+        width:45.4%;
+        transform:translateY(-10%);
+        &-text {
+            font-size:2.7rem;
+            letter-spacing: 6px;
+            opacity:0;
+            font-weight: 450;
+            transform: translateY(-7rem);
+            opacity: 0;
+            animation: captionTextMove 1s;
+            animation-delay:1.5s;
+            animation-fill-mode: forwards;
+        }
+        .icon { 
+            color:#d4d434;
+        }
+        h1 {
+            display:flex;
+            flex-direction: column;
+            opacity: inherit;
+            opacity:0;
+            animation:captionMove 1s;
+            animation-delay:1.9s;
+            animation-fill-mode: forwards;
+            .icon {
+                font-size:11rem;
+            }
+            .light {
+                font-size: 11rem;
+                letter-spacing: 4px;
+                font-weight: 200;
+            }
+            .add {
+                font-size:11rem;
+                font-weight:500;
+            }
+            .add2 {
+                font-size:11rem;
+                font-weight: 500;
+            }
+        }
+    }
+    &__image {
+        .image {
+            width:76.6rem;
+            animation: imageMove 1s;
+        }
+    }
+    &__box {
+        position: absolute;
+        border:2rem solid #d4d434;
+        width:47%;
+        height:65%;
+        top:50%;
+        left:50%;
+        z-index: -1;
+        transform:translate(-50%,-50%);
+        opacity:0;
+        animation: boxMove .7s;
+
+        animation-delay:.8s;
+        animation-fill-mode: forwards;
+    }
+    &__social-list {
+        display:flex;
+        flex-direction: row;
+        list-style: none;
+        font-size:2.3rem;
+        width: 10%;
+        justify-content: space-between;
+        transition:transform .3s;
+        transform:translateY(-4rem);
+        .item {
+            color:black;
+        }
+        animation:socialMove 1s;
+    }
+    
+}

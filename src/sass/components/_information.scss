@@ -1,0 +1,363 @@
+.container-infor {
+    padding:0 1.6rem;
+    
+    .information {
+        padding:0 1.6rem;
+        // display:flex;
+        // flex-direction: row;
+        .container-left-right {
+            display: flex;
+            flex-direction: row;
+            @include respond(tab-land) {
+                flex-direction: column;
+            }
+        }
+        .box {
+            color:$color-about-text;
+            &-inner {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+                line-height: 30px;
+                font-size:1.8rem;
+                margin-top:42rem;
+                margin-left:5rem;
+                @include respond(tab-land) {
+                    margin-top:15rem;
+                    margin-left:0rem;
+                    text-align: center;
+                }
+                
+                
+                &__name{
+                    color:#fff;
+                    font-size:4.2rem;
+                    font-weight: 300;
+                    
+                }
+                &__description {
+                    margin-top:1rem;
+                    text-transform: uppercase;
+                    letter-spacing: 4px;
+                }
+            }
+        }
+        &__right {
+            width:42%;
+            height:76rem;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 0 0 4.1%;
+            opacity: 0;
+            animation: moveInBottom 1s;
+            animation-fill-mode: forwards;
+            @include respond(tab-land) {
+                width:57%;
+            }
+            @include respond(tab-port) {
+                
+                margin-top:500px;
+                width:100%;
+            }
+            @include respond(phone) {
+                margin-top:550px;
+            }
+            
+            .txt-frame {
+                h3 {
+                    font-weight: 700;
+                    margin:  0 0 2.4rem;
+                    font-size:4rem;
+                    line-height: 36px;
+                }
+                p {
+                    color:#707070;
+                    margin: 0 0 5.6rem;
+                    font-size:1.65rem;
+                    line-height: 26px;
+                    font-weight: 500;
+                    @include respond(tab-port) {
+                        line-height:20px;
+                    }
+                    @include respond(phone) {
+                        line-height: 15px;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}
+.information__left {
+    display:flex;
+    position:relative;
+    flex-direction: row;
+    height:76rem;
+    width:58%;
+    @include respond(tab-land) {
+        width:100%;
+        height:100%;
+    }
+    &-text {
+        width:50%;
+        background-color:#252525;
+        padding:8rem 2rem;
+        position: relative;
+        opacity: 1;
+        animation:moveInLeft 1s;
+        animation-fill-mode: forwards;
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width:100%;
+        }
+        .number {
+            padding:12px 129px 0 30px;
+            font-family: "OCR A Std";
+            font-size:7.5rem;
+            letter-spacing: 1.4rem;
+            color:$color-about-text;
+            @include respond(tab-land) {
+                padding:0;
+            }
+        }
+        .tild {
+            color:$color-about-text;
+            width:500px;
+            position: absolute;
+            letter-spacing: 2.7rem;
+            font-size:2.7rem;
+            top:18.7%;
+            transform:rotate(-90deg);
+            left:-3rem;
+            @include respond(tab-land) {
+                font-size:5rem;
+                transform:rotate(0deg);
+                width:280px;
+                text-align: center;
+                top:45%;
+                left:50%;
+                transform: translate(-50%,-50%);
+            }
+            
+            
+        }
+        .box {
+            color:$color-about-text;
+            &-inner {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+                line-height: 30px;
+                font-size:14px;
+                margin-top:42rem;
+                margin-left:5rem;
+                @include respond(tab-land) {
+                    margin-top:15rem;
+                    margin-left:0rem;
+                    text-align: center;
+                }
+                
+                
+                &__name{
+                    color:#fff;
+                    font-size:4.2rem;
+                    font-weight: 300;
+                    
+                }
+                &__description {
+                    margin-top:1rem;
+                    text-transform: uppercase;
+                    letter-spacing: 4px;
+                }
+            }
+        }
+    }
+    &-image {
+        height:100%;
+        width:100%;
+        padding:8.2rem 0;
+        position: absolute;
+        width:60%;
+        left:40%;
+        animation: moveInRight 1s;
+        animation-fill-mode: forwards;
+        @include respond(tab-land) {
+            width:40%;
+            height:500px;
+            top:100%;
+            left:60%;
+        }
+        @include respond(tab-port) {
+            width:100%;
+            left:0;
+        }
+        .image {
+            height:100%;
+            width:100%;
+            box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+        }
+        
+        
+    }
+
+}
+.information__right {
+    display:flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    height:76rem;
+    position: relative;
+    @include respond(tab-land) {
+        width:100%;
+        height:100%;
+    }
+    .signature {
+        &__image {
+            width:20rem;
+        }
+    }
+    &-text {
+        
+        width:50%;
+        background-color:#252525;
+        padding:8rem 2rem;
+        position: relative;
+        opacity: 0;
+        animation:moveInLeft 1s;
+        animation-fill-mode: forwards;
+        @include respond(tab-land) {
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .number {
+            padding:12px 40px 0 30px;
+            font-family: "OCR A Std";
+            font-size:7.5rem;
+            letter-spacing: 1.4rem;
+            color:$color-about-text;
+            margin-left:14rem;
+            @include respond(tab-land) {
+                padding:0;
+                margin-left:0;
+            }
+        }
+        .tild {
+            color:$color-about-text;
+            width:500px;
+            position: absolute;
+            letter-spacing: 2.7rem;
+            font-size:2.7rem;
+            top:18.7%;
+            transform:rotate(-90deg);
+            left:-14rem;
+            
+            @include respond(tab-land) {
+                font-size: 5rem;
+                transform: rotate(0deg);
+                width:500px;
+                text-align: center;
+                top:45%;
+                left:50%;
+                
+                transform:translate(-50%,-50%);
+            }
+        }
+        .box {
+            color:$color-about-text;
+            &-inner {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+                
+                line-height: 30px;
+                margin-top:49rem;
+                margin-left:11rem;
+                @include respond(tab-land) {
+                    
+                    margin-top: 12rem;
+                    margin-left: 0;
+                }
+                &__name{
+                    color:#fff;
+                    font-size:16px;
+                    font-weight:500;
+                    text-transform: uppercase;
+                    font-style: italic;
+                    position: relative;
+                    transition:color .2s;
+                    @include respond (tab-port) {
+                        font-size:10px;
+                    }
+                    &:hover {
+                        color:$color-primary;
+                        
+                        &::before {
+
+                            transform: skewX(-60deg);
+                            border-top:1px solid $color-primary;
+                            border-bottom: 1px solid $color-primary;
+                            @include respond(tab-port) {
+                            transform: skewX(-60deg) translate(0px,0px) ; ;
+                        }
+                        }
+                    }
+                    &::before {
+                        content:"";
+                        padding:18px 36px;
+                        border-top:1px solid white;
+                        border-bottom: 1px solid white;
+                        position: absolute;
+                        top: -.5rem;
+                        left:0;
+                        transform: skewX(60deg);
+                        transition:transform .5s, color .5s;
+                        @include respond(tab-land) {
+                            top: 0rem;
+                            padding:15px 34px;
+                        }
+                        @include respond(tab-port) {
+                            padding: 15px 25px;
+                            transform: skewX(60deg) translate(0px,0px) ; ;
+                        }
+
+                    }
+                }
+                // &__description {
+                //     margin-top:1rem;
+                //     text-transform: uppercase;
+                //     letter-spacing: 4px;
+                // }
+            }
+        }
+    }
+    &-image {
+        height:100%;
+        width:55%;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 100;
+        padding:8.2rem 0;
+        animation: moveInRight 1s;
+        animation-fill-mode: forwards;
+        @include respond(tab-land) {
+            display: none;
+        }
+        .image {
+            height:100%;
+            width:100%;
+            box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+        }
+    }
+
+}

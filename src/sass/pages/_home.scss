@@ -1,0 +1,206 @@
+.home { 
+    .container-navbar{
+        background-color: white;
+        padding:3.3rem 1.8rem 3.3rem 1.8rem;
+        .navbar {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-direction: row;
+            padding:0 1.5rem;
+            @include respond(tab-port) {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+            .menu-bar {
+                padding:.7rem 1.8rem;
+                border:1px solid #D8D8D8;
+                border-radius:2px;
+                position: absolute;
+                top:0;
+                right:0;
+                opacity: 0;
+                visibility: hidden;
+                transition:all .3s;
+                cursor: pointer;
+                @include respond(tab-port) {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .icon {
+                    font-size:2.3rem;
+                    color:#A4A4A4;
+                }
+            }
+            &__logo {
+                display:flex;
+                width:19.4rem;
+                font-size:3.6rem;
+                .icon {
+                    color:#d4d434;
+                    margin:0px 5px 0px 3px;
+                    
+                }
+                .text {
+                    
+                    img {
+                        width:19.4rem;
+                    }
+                }
+            }
+            &-right {
+                width:100%;
+                display:flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                @include respond(tab-port) {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+                &__collapse {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    @include respond(tab-port) {
+                        margin-top:2rem;
+                    }
+                    &-nav {
+                        display:flex;
+                        flex-direction:row;
+                        list-style: none;
+                        
+                        transition: all .4s;
+                        @include respond(tab-port) {
+                            height:0;
+                            overflow: hidden;
+                            flex-direction: column;
+                            li {
+                                margin-top:2.5rem;
+                            }
+                        }
+                        #active {
+                            .item {
+                                color:$color-primary;
+                                font-style: italic;
+                                &::before {
+                                    opacity: 1;
+                                    transform: skewX(-60deg) translateX(20px);
+                                }
+                            }
+                        }
+                        .item {
+                            padding:0.8rem 2.2rem;
+                            font-size:12px;
+                            text-transform:uppercase;
+                            letter-spacing: 2px;
+                            font-weight:450;
+                            color:inherit;
+                            text-decoration: none;
+                            vertical-align:middle;
+                            transition: color .2s;
+                            position:relative;
+                            @include respond(tab-land) {
+                                font-size:1.4rem;
+                                
+                            }
+                            @include respond(tab-port) {
+                                letter-spacing: 1px;
+                            }
+                            &:hover {
+                                color:$color-primary;
+                                font-style: italic;
+                                &::before {
+                                    opacity: 1;
+                                    transform: skewX(-60deg) translateX(40px);
+                                }
+                            }
+                            
+                            &::before {
+                                content:"";
+                                padding:15px 30px;
+                                border-top:1px solid $color-primary;
+                                border-bottom: 1px solid $color-primary;
+                                position: absolute;
+                                opacity: 0;
+                                top:0;
+                                left:0;
+                                transform: skewX(60deg) translateX(40px);
+                                transition:transform .5s, color .5s , opacity .5s;
+                                @include respond(tab-land) {
+                                    top: 0rem;
+                                    padding:12px 25px;
+                                }
+                                @include respond(tab-port) {
+                                    display:none;
+                                }
+                            }
+                        }
+                    }
+                    #home {
+                        &:hover {
+                            &::before {
+                                transform: skewX(-60deg) translateX(20px);
+                            }
+                        }
+                        &::before {
+                            transform: skewX(60deg) translateX(20px);
+                            @include respond(tab-land) {
+                                top: 0rem;
+                                padding:12px 25px;
+                            }
+                            @include respond(tab-port) {
+                                display:none;
+                            }
+                        }
+                        
+                    }
+                }
+                &__search {
+                    display:flex;
+                    flex-direction: row;
+                    align-items: center;
+                    @include respond(tab-port) {
+                        display:none;
+                    }
+                    &__email {
+                        
+                        font-size:2.8rem;
+                        margin-left:5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+#fixed {
+    width:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: smoothScroll 2s forwards;
+    background-color: white;
+    z-index:10000;
+}
+.smooth-section {
+    height:10rem;
+    width:100%;
+}
+.App {
+    position: relative;
+    
+}
+
+.spinner {
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    position: fixed;
+    z-index:100000;
+    transition:all .3s;
+    
+}

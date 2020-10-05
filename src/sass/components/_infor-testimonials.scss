@@ -1,0 +1,162 @@
+.infor-testimonials {
+    padding:0 3.2rem;
+    .container-information {
+        display:flex;
+        flex-direction: row;
+        @include respond(tab-land) {
+            flex-direction: column;
+        }
+        .img-frame{ 
+            width:67%;
+            height:70%;
+            transform:translateX(-3rem);
+            @include respond(tab-land) {
+                width:100%;
+                transform:translateX(0);
+            }
+
+            
+            &__slider {
+                padding:12rem 0;
+                height:78rem;
+                .mask {
+                    height:100%;
+                    background: white;
+                    position:relative;
+                    display: flex;
+                    flex-direction: row;
+                    padding:7rem 45rem 7rem 3rem;
+                    @include respond(tab-land) {
+                        padding:7rem 60rem 7rem 3rem;
+                    }
+                    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+                    .main-img {
+                        position: absolute;
+                        
+                        top:-8%;
+                        right:4%;
+                        @include respond(tab-land) {
+                            
+                        }
+                        .img {
+                            width:40rem;
+                            @include respond(tab-land) {
+                            width:50rem;
+                            height:50rem;
+                            }
+                        }
+                    }
+                }
+                .slide {
+                    width:100%;
+                    .content {
+                        font-size:1.7rem;
+                        font-weight: 450;
+                        letter-spacing: .8px;
+                    }
+                    .name {
+                        margin-top:4rem;
+                        margin-bottom:1rem;
+                        font-size:4rem;
+                        font-weight: 400;
+                    }
+                    .major{
+                        text-transform: capitalize;
+                        font-size: 1.5rem;
+                        color:#b7b7b7;
+                        letter-spacing: 2px;
+                        
+                    }
+                    .team-img {
+                        margin-top:5.3rem;
+                        display:grid;
+                        grid-gap: 10px;
+                        grid-template-columns: 14rem 14rem 14rem;
+                        @include respond(tab-land) {
+                            grid-template-columns: 18rem 18rem 18rem;
+                        }
+                        .img {
+                            transition:all .3s;
+                            cursor: pointer;
+                            &:hover {
+                                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                            }
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .information__left {
+        position: relative;
+        width: 33%;
+        @include respond (tab-land) {
+            width:100%;
+        }
+        &-text {
+            width:100%;
+            .tild {
+                margin-top: 17rem;
+                @include respond(tab-land) {
+                    margin-top:0;
+                }
+            }
+        }
+        &-text {
+            .box {
+                
+                &-inner {
+                    &__name {
+                        color:#fff;
+                        margin-left:4rem;
+                        margin-top:50rem;
+                        font-size:13px;
+                        font-weight:500;
+                        text-transform: uppercase;
+                        font-style: italic;
+                        position: relative;
+                        transition:color .2s;
+                        @include respond(tab-land) {
+                            font-size:12px;
+                            margin-top:12rem;
+                            margin-left: 0;
+                        }
+                        &:hover {
+                            color:$color-primary;
+                            &::before {
+                                transform: skewX(-60deg);
+                                border-top:1px solid $color-primary;
+                                border-bottom: 1px solid $color-primary;
+                                // @include respond(tab-land) {
+                                //     transform: skewX(-60deg) translateY(.4rem);
+                                // }
+                                // @include respond(tab-port) {
+                                //     transform: skewX(-60deg) translate(2rem,2rem);
+                                // }
+                            }
+                        }
+                        &::before {
+                            content:"";
+                            padding:13px 30px;
+                            border-top:1px solid white;
+                            border-bottom: 1px solid white;
+                            position: absolute;
+                            top: -.5rem;
+                            left:0;
+                            transform: skewX(60deg) translateY(5px);
+                            @include respond(tab-land) {
+                                transform: skewX(60deg) translateY(3px);
+                            }
+                            // @include respond(tab-port) {
+                            //     transform: skewX(60deg) translate(-2rem,2rem);
+                            // }
+                            transition:transform .5s, color .5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

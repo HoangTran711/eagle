@@ -1,0 +1,33 @@
+.search {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width:22rem;
+    @include respond(tab-land) {
+        width: 15rem;
+    }
+    &:hover {
+        .input {
+            width:20rem;
+            opacity: 1;
+        }
+    }
+    &__input {
+        .input {
+            display: block;
+            background-color: white;
+            opacity:0;
+            padding:1.2rem;
+            height: 3rem;
+            width: 0rem;
+            transition: all .3s;
+            outline: none;
+            border: 1px solid #D8D8D8;
+        }
+    }
+    &__icon {
+        margin-left:1rem;
+        font-size: 2.4rem;
+    }
+}

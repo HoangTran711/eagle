@@ -1,0 +1,115 @@
+.infor-services {
+    font-size:1.6rem;
+    padding:0 3.2rem;
+    overflow: hidden;
+    .container-services {
+        display:flex;
+        flex-direction: row;
+        @include respond(tab-land) {
+            flex-direction: column-reverse;
+        }
+    }
+    .txt-frame {
+        width:67%;
+        padding:7.5rem 0;
+        @include respond(tab-land) {
+            width:100%;
+        }
+        .services__list {
+            list-style: none;
+            display:grid;
+            grid-template-columns: 1fr 1fr  1fr;
+            grid-template-rows: auto auto auto;
+            .item {
+                padding:2rem;
+                .title{
+                    text-align: center;
+                    font-weight: 700;
+                    line-height: 18px;
+                }
+                .content {
+                    font-size:1.4rem;
+                    color:#707070;
+                    margin-top:1.4rem;
+                    letter-spacing: 1.8px;
+                    line-height: 25px;
+                    font-weight: 500;
+                    @include respond(tab-land) {
+                        letter-spacing: 1px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            
+        }
+    }
+    .information__right {
+        width:33%;
+        @include respond(tab-land) {
+            width:100%;
+        }
+        &-text {
+            width:100%;
+            .tild {
+                width:600px;
+                top:26rem;
+                left:-6rem;
+                @include respond (tab-land) {
+                    width:600px;
+                    top:50%;
+                    left:50%;
+                }
+            }
+            .number {
+                width:10rem;
+                margin-left:25rem;
+                @include respond(tab-land) {
+                    margin-left:0;
+                    
+                }
+            }
+            .box {
+                &-inner {
+                    &__name {
+                        font-size:16px;
+                        font-size:16px;
+                        left:10rem;
+                        width:200rem;
+                        transition:transform .2s;
+                        cursor: pointer;
+                        @include respond (tab-land) {
+                            width:100%;
+                            left:0;
+                        }
+                        @include respond (tab-port) {
+                            font-size:10px;
+                        }
+                        &:hover {
+                            &::before {
+                                transform:skewX(-72deg) translate(3.5rem);
+                                @include respond(tab-land) {
+                                    transform:skewX(-72deg) translate(35px,-4px);
+                                }
+                                @include respond(tab-port) {
+                                    transform: skewX(-72deg) translate(20px,5px) ; ;
+                                }
+                                
+                            }
+                        }
+                        &::before{
+                            padding:18px 40px;
+                            transform:skewX(72deg) translate(3.5rem) ;
+                            @include respond(tab-land) {
+                                transform:skewX(72deg) translate(35px,-4px) ;
+                            }
+                            @include respond(tab-port) {
+                                padding:10px 30px;
+                                transform: skewX(72deg) translate(0px,5px) ; ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

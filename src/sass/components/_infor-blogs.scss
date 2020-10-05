@@ -1,0 +1,149 @@
+.infor-blogs {
+    padding:0 3.2rem;
+    overflow: hidden;
+    .container-information {
+        display:flex;
+        flex-direction: row;
+        @include respond(tab-land) {
+            flex-direction: column-reverse;
+        }
+    }
+    .img-frame {
+        width:67%;
+        @include respond(tab-land) {
+            width:100%;
+        }
+        .img {
+            width:52rem;
+            height:37rem;
+            @include respond(tab-land) {
+                width:80rem;
+                height:60rem;
+            }
+        }
+        .txt-frame {
+            padding:10rem 8rem 0 0;
+            
+            h3 {
+                font-size:2.8rem;
+            }
+            p {
+                letter-spacing: .7px;
+                margin-top:3rem;
+                margin-bottom:3rem;
+                font-size:1.7rem;
+                font-weight: 500;
+                color:#707070;
+            }
+            a {
+                font-size:1.6rem;
+                font-style:italic;
+                text-transform: uppercase;
+                color:black;
+                text-decoration: none;
+                transition:color .5s;
+                &:hover {
+                    color:$color-primary;
+                    .icon {
+                        transform:translateX(1rem);
+                    }
+                }
+                .icon {
+                    font-size:1.3rem;
+                    margin-left:1rem;
+                    transition:transform .5s;
+                }
+            }
+        }
+        .section1 {
+            display: flex;
+            flex-direction: row;
+            .sub-caption {
+                top:50%;
+                right:-12rem;
+                transform:rotate(-90deg);
+                font-size:1.3rem;
+                font-weight: 600;
+                letter-spacing: 7px;
+                position: absolute;
+                color:#b7b7b7;
+            }
+            &__image {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+            }
+            .txt-frame {
+
+            }
+        }
+        .section2 {
+            display: flex;
+            flex-direction: row;
+            &__image {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                .sub-caption {
+                    top:50%;
+                    left:-13rem;
+                    transform:rotate(90deg) translateY(-50%);
+                    font-size:1.3rem;
+                    font-weight: 600;
+                    letter-spacing: 7px;
+                    position: absolute;
+                    color:#b7b7b7;
+                }
+            }
+            .txt-frame {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                p {
+                    text-align: end;
+                }
+            }
+            
+        }
+    }
+    .information__right {
+        width:33%;
+        @include respond(tab-land) {
+            width:100%;
+        }
+        &-text {
+            width:100%;
+            position: relative;
+            .tild {
+                width:600px;
+                top:26rem;
+                left:-6rem;
+                @include respond(tab-land) {
+                    top:50%;
+                    left:50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+            .number {
+                margin-left:25rem;
+                @include respond(tab-land){
+                    margin-left:0;
+                }
+            }
+            .box {
+                &-inner {
+                    &__name {
+                        left:10rem;
+                        width:30%;
+                        transition:transform .2s;
+                        cursor: pointer;
+                        @include respond(tab-land) {
+                            width:100%;
+                            left:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

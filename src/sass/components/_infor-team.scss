@@ -1,0 +1,116 @@
+.infor-team {
+    max-width: 100%;
+    padding:0 3.2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    @include respond(tab-land) {
+        flex-direction: column-reverse;
+    }
+    .txt-frame {
+        width:80%;
+        @include respond(tab-land) {
+            width:100%;
+        }
+        &__team {
+            display:flex;
+            flex-direction: row;
+            list-style: none;
+            padding:7.2rem 1.75rem 6.6rem 0;
+            .header {
+                width:80%;
+                padding-right:6rem;
+                border-right:.5px solid #E6E6E6;
+            }
+            h2 {
+                font-weight: 300;
+                font-size:3.7rem;
+                .name {
+                    text-decoration: none;
+                    color:#252525;
+                    
+                }
+            }
+            
+            .major {
+                font-size:1.5rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color:#b7b7b7;
+                display:block;
+                margin: 1rem 0 3.8rem;
+            }
+            .container-description {
+                width:70%;
+                padding:2rem;
+                
+                .description {
+                    color:#707070;
+                    font-size:1.6rem;
+                    font-weight: 450;
+                    letter-spacing: 1px;
+                }
+            }   
+            
+        }
+    }
+}
+.container-infor-team {
+    display: flex;
+    flex-direction: column;
+}
+.social-network {
+    display:flex;
+    flex-direction: row;
+    list-style: none;
+    font-size:2.3rem;
+    width: 80%;
+    justify-content: space-between;
+    .item {
+        color:black;
+    }
+}
+.img-holder{ 
+    display:flex;
+    flex-direction: row;
+    .box {
+        
+        &__img {
+            padding:2rem;
+            
+            .img {
+                // &:last-child {
+                //     margin-right:2rem;
+                // }
+                width:100%;
+                transition:box-shadow .3s;
+                cursor:pointer;
+                &:hover {
+                    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+                
+            }
+        }
+        &__text {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            &-name {
+                text-decoration: none;
+                color:#252525;
+                font-size:2.5rem;
+                font-weight: 400;
+                text-align: center;
+                transition:color .3s;
+                &:hover {
+                    color:$color-primary;
+                }
+            }
+            .designation {
+                color:#b7b7b7;
+                text-transform: uppercase;
+                font-size:1.65rem;
+            }
+        }
+    }
+}

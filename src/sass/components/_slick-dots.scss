@@ -1,0 +1,17 @@
+.slick-dots {
+    position: absolute;
+    top:50%;
+    right:5%;
+    transform: translateY(-50%);
+    list-style-type: none;
+    &__item {
+        margin-top:3rem;
+        cursor: pointer;
+        height:.5rem;
+        width:4rem;
+        background-color: transparent;
+        border:0.5px solid white;
+        border-radius: 4px;
+        outline:none;
+    }
+}
