@@ -129,9 +129,10 @@
                                 transform: skewX(-60deg);
                                 border-top:1px solid $color-primary;
                                 border-bottom: 1px solid $color-primary;
-                                // @include respond(tab-land) {
-                                //     transform: skewX(-60deg) translateY(.4rem);
-                                // }
+                                transform: skewX(-60deg) translateY(5px);
+                                @include respond(tab-land) {
+                                    transform: skewX(-60deg) translateY(3px);
+                                }
                                 // @include respond(tab-port) {
                                 //     transform: skewX(-60deg) translate(2rem,2rem);
                                 // }

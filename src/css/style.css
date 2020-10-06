@@ -1023,7 +1023,11 @@ body {
         .infor-testimonials .information__left-text .box-inner__name:hover::before {
           transform: skewX(-60deg);
           border-top: 1px solid #d4d434;
-          border-bottom: 1px solid #d4d434; }
+          border-bottom: 1px solid #d4d434;
+          transform: skewX(-60deg) translateY(5px); }
+          @media only screen and (max-width: 64em) {
+            .infor-testimonials .information__left-text .box-inner__name:hover::before {
+              transform: skewX(-60deg) translateY(3px); } }
       .infor-testimonials .information__left-text .box-inner__name::before {
         content: "";
         padding: 13px 30px;
